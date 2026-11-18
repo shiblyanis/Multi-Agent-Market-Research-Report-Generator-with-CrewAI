@@ -1,0 +1,210 @@
+{
+  "run_id": "ed7ec567",
+  "query": "Tech Sector Q3 Analysis",
+  "status": "completed",
+  "error": null,
+  "process": "hierarchical",
+  "manager_model": "gpt-4o",
+  "worker_model": "gpt-4o-mini",
+  "started_at": "2026-11-18T18:17:16.294404+00:00",
+  "finished_at": "2026-11-18T18:17:16.752589+00:00",
+  "total_seconds": 0.458,
+  "tasks": [
+    {
+      "task": "research",
+      "agent": "Crew Manager",
+      "status": "completed",
+      "seconds": 0.298
+    },
+    {
+      "task": "analysis",
+      "agent": "Crew Manager",
+      "status": "completed",
+      "seconds": 0.049
+    },
+    {
+      "task": "writing",
+      "agent": "Crew Manager",
+      "status": "completed",
+      "seconds": 0.032
+    }
+  ],
+  "agent_runs": [
+    {
+      "agent": "Market Research Specialist",
+      "task": "Current Task: Research the topic: 'Tech Sector Q3 Analysis'. 1. Search the we...",
+      "seconds": 0.038
+    },
+    {
+      "agent": "Crew Manager",
+      "task": "research",
+      "seconds": 0.0
+    },
+    {
+      "agent": "Financial Data Analyst",
+      "task": "Current Task: Analyse the numeric metrics saved at sample_outputs/metrics.csv...",
+      "seconds": 0.031
+    },
+    {
+      "agent": "Crew Manager",
+      "task": "analysis",
+      "seconds": 0.0
+    },
+    {
+      "agent": "Technical Reports Writer",
+      "task": "Current Task: Write the final market report for: 'Tech Sector Q3 Analysis'. U...",
+      "seconds": 0.011
+    },
+    {
+      "agent": "Crew Manager",
+      "task": "writing",
+      "seconds": 0.0
+    }
+  ],
+  "routing_history": [
+    {
+      "t": 0.0,
+      "event": "task_started",
+      "agent": "Crew Manager",
+      "detail": "research"
+    },
+    {
+      "t": 0.009,
+      "event": "agent_started",
+      "agent": "Crew Manager",
+      "detail": "research"
+    },
+    {
+      "t": 0.249,
+      "event": "delegation",
+      "agent": "Crew Manager",
+      "detail": "-> Market Research Specialist | delegate_work_to_coworker {\"task\": \"\\nCurrent Task: Research the topic: 'Tech Sector Q3 Analysis'.\\n1. Search the web and scrape pages to find recent financial metrics for the main co..."
+    },
+    {
+      "t": 0.251,
+      "event": "agent_started",
+      "agent": "Market Research Specialist",
+      "detail": "Current Task: Research the topic: 'Tech Sector Q3 Analysis'. 1. Search the we..."
+    },
+    {
+      "t": 0.263,
+      "event": "tool_call",
+      "agent": "Market Research Specialist",
+      "detail": "web_search_and_scrape {\"query\": \"Tech Sector Q3 Analysis revenue net income\"}"
+    },
+    {
+      "t": 0.27,
+      "event": "tool_call",
+      "agent": "Market Research Specialist",
+      "detail": "save_metrics_csv {\"csv_text\": \"company,revenue_usd_bn,net_income_usd_bn,yoy_growth_pct,operating_margin_pct\\nExample Cloud Inc,52.4,14.8,11.2,31.5\\nSample Semiconductor Co,38.1,9.2,8.4,27.9\\nDemo Software Ltd,24.7,..."
+    },
+    {
+      "t": 0.289,
+      "event": "agent_done",
+      "agent": "Market Research Specialist",
+      "detail": "0.04s"
+    },
+    {
+      "t": 0.297,
+      "event": "agent_done",
+      "agent": "Crew Manager",
+      "detail": "0.00s"
+    },
+    {
+      "t": 0.298,
+      "event": "task_done",
+      "agent": "Crew Manager",
+      "detail": "research (0.30s)"
+    },
+    {
+      "t": 0.301,
+      "event": "task_started",
+      "agent": "Crew Manager",
+      "detail": "analysis"
+    },
+    {
+      "t": 0.303,
+      "event": "agent_started",
+      "agent": "Crew Manager",
+      "detail": "analysis"
+    },
+    {
+      "t": 0.309,
+      "event": "delegation",
+      "agent": "Crew Manager",
+      "detail": "-> Financial Data Analyst | delegate_work_to_coworker {\"task\": \"\\nCurrent Task: Analyse the numeric metrics saved at sample_outputs/metrics.csv. Use the financial metrics tool to compute the statistical summary ..."
+    },
+    {
+      "t": 0.311,
+      "event": "agent_started",
+      "agent": "Financial Data Analyst",
+      "detail": "Current Task: Analyse the numeric metrics saved at sample_outputs/metrics.csv..."
+    },
+    {
+      "t": 0.318,
+      "event": "tool_call",
+      "agent": "Financial Data Analyst",
+      "detail": "calculate_financial_metrics {\"csv_path\": \"sample_outputs/metrics.csv\"}"
+    },
+    {
+      "t": 0.342,
+      "event": "agent_done",
+      "agent": "Financial Data Analyst",
+      "detail": "0.03s"
+    },
+    {
+      "t": 0.35,
+      "event": "agent_done",
+      "agent": "Crew Manager",
+      "detail": "0.00s"
+    },
+    {
+      "t": 0.35,
+      "event": "task_done",
+      "agent": "Crew Manager",
+      "detail": "analysis (0.05s)"
+    },
+    {
+      "t": 0.357,
+      "event": "task_started",
+      "agent": "Crew Manager",
+      "detail": "writing"
+    },
+    {
+      "t": 0.36,
+      "event": "agent_started",
+      "agent": "Crew Manager",
+      "detail": "writing"
+    },
+    {
+      "t": 0.368,
+      "event": "delegation",
+      "agent": "Crew Manager",
+      "detail": "-> Technical Reports Writer | delegate_work_to_coworker {\"task\": \"\\nCurrent Task: Write the final market report for: 'Tech Sector Q3 Analysis'. Use ONLY the facts and numbers from the research and analysis results..."
+    },
+    {
+      "t": 0.369,
+      "event": "agent_started",
+      "agent": "Technical Reports Writer",
+      "detail": "Current Task: Write the final market report for: 'Tech Sector Q3 Analysis'. U..."
+    },
+    {
+      "t": 0.38,
+      "event": "agent_done",
+      "agent": "Technical Reports Writer",
+      "detail": "0.01s"
+    },
+    {
+      "t": 0.388,
+      "event": "agent_done",
+      "agent": "Crew Manager",
+      "detail": "0.00s"
+    },
+    {
+      "t": 0.388,
+      "event": "task_done",
+      "agent": "Crew Manager",
+      "detail": "writing (0.03s)"
+    }
+  ]
+}
